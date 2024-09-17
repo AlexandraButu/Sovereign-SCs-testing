@@ -26,10 +26,10 @@ async fn main() {
     let cmd = args.next().expect("at least one argument required");
     let mut interact = ContractInteract::new().await;
     match cmd.as_str() {
-        "deploy" => interact.deploy().await,
-        "upgrade" => interact.upgrade().await,
-        "whitelistEnshrineEsdt" => interact.whitelist_enshrine_esdt().await,
-        "transferTokens" => interact.transfer_tokens().await,
+      //  "deploy" => interact.deploy().await,
+     //   "upgrade" => interact.upgrade().await,
+      //  "whitelistEnshrineEsdt" => interact.whitelist_enshrine_esdt().await,
+      //  "transferTokens" => interact.transfer_tokens().await,
         _ => panic!("unknown command: {}", &cmd),
     }
 }
@@ -158,6 +158,7 @@ impl ContractInteract {
         println!("Result: {response:?}");
     }
 
+    /*
     async fn transfer_tokens(&mut self) {
         let token_id = String::new();
         let token_nonce = 0u64;
@@ -183,13 +184,13 @@ impl ContractInteract {
 
         println!("Result: {response:?}");
     }
-
+ */
 }
 
 
-/* 
+
 #[tokio::test]
 async fn test_deploy() {
     let mut interact = ContractInteract::new().await;
     interact.deploy().await;
-}*/
+}

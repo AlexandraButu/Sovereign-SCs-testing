@@ -193,5 +193,6 @@ impl ContractInteract {
 async fn test_deploy() {
     let mut interact = ContractInteract::new().await;
     interact.deploy().await;
+    
 }
 
